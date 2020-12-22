@@ -14,4 +14,10 @@
 	<natures>
 		<nature>org.eclipse.jdt.core.javanature</nature>
 	</natures>
+	<variableList>
+		<variable>
+			<name>photos</name>
+			<value>file:/C:/Users/Noah/eclipse-workspace/LoginPage</value>
+		</variable>
+	</variableList>
 </projectDescription>

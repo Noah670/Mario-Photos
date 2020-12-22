@@ -1,12 +1,13 @@
 package Login;
 
 import java.awt.Color;
-import java.awt.Container;
-import java.awt.FlowLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.image.BufferedImage;
+import java.io.IOException;
 import java.util.concurrent.TimeUnit;
 
+import javax.imageio.ImageIO;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
@@ -44,13 +45,22 @@ public class LoginUI implements ActionListener {
 			// handle exception
 		}
 
+		BufferedImage myIcon = null;
+		try {
+			myIcon = ImageIO.read(LoginUI.class.getResource("/res/mario.png"));
+		} catch (IOException e) {
+			//  catch block
+			e.printStackTrace();
+		}
+
+		myFrame.setIconImage(myIcon);
+
 		myFrame.setSize(340, 200);
 		myFrame.setTitle("Mario Login");
 		myFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		myFrame.add(myPanel);
 
-		// panel setup
-		// myPanel.setLocation(null);
+		
 		myPanel.setLayout(null);
 
 		userLabel = new JLabel("Username:");
@@ -92,7 +102,8 @@ public class LoginUI implements ActionListener {
 		String username = userText.getText();
 		String password = passwordText.getText();
 
-		if (username.equals("mario") && password.equals("epic")) {
+		if (username.equals("mario") && password.equals("epic")
+				|| username.equals("luigi") && password.equals("1985")) {
 			correctLogin.setText("Successfully logged in!");
 			try {
 				TimeUnit.MILLISECONDS.sleep(200);
@@ -100,7 +111,7 @@ public class LoginUI implements ActionListener {
 				// TODO Auto-generated catch block
 				e1.printStackTrace();
 			}
-			// HomePage myHome = new HomePage();
+			
 			HomePage.newFrame();
 		} else {
 			correctLogin.setText("Incorrect Username or Password");

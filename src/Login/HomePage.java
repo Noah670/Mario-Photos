@@ -3,12 +3,15 @@ package Login;
 import java.awt.Color;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.image.BufferedImage;
+import java.io.IOException;
 
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
+import javax.imageio.ImageIO;
 import javax.swing.ImageIcon;
 
 public class HomePage implements ActionListener {
@@ -17,15 +20,15 @@ public class HomePage implements ActionListener {
 	private static JLabel userLabel;
 
 	private static JButton peach;
-	private static ImageIcon peachImage;
+	private static BufferedImage newPeachImage;
 	private static JLabel peachLabel;
 	private static JFrame myFrame;
 	private static JPanel myPanel;
 	private static JButton daisy;
-	private static ImageIcon daisyImage;
+	private static BufferedImage newDaisyImage;
 	private static JLabel daisyLabel;
 	private static JButton rosalina;
-	private static ImageIcon rosalinaImage;
+	private static BufferedImage newRosalinaImage;
 	private static JLabel rosalinaLabel;
 
 	public static void newFrame() {
@@ -49,8 +52,15 @@ public class HomePage implements ActionListener {
 		peach.addActionListener(new HomePage());
 		myPanel.add(peach);
 
-		peachImage = new ImageIcon("peach.png");
-		peachLabel = new JLabel(peachImage);
+		try {
+			newPeachImage = ImageIO.read(HomePage.class.getResource("/res/peach.png"));
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+
+		peachLabel = new JLabel("peach");
+		peachLabel.setIcon(new ImageIcon(newPeachImage));
 		peachLabel.setBounds(10, 100, 374, 654);
 		myPanel.add(peachLabel);
 		peachLabel.hide();
@@ -60,8 +70,15 @@ public class HomePage implements ActionListener {
 		daisy.addActionListener(new HomePage());
 		myPanel.add(daisy);
 
-		daisyImage = new ImageIcon("daisy.jpg");
-		daisyLabel = new JLabel(daisyImage);
+		try {
+			newDaisyImage = ImageIO.read(HomePage.class.getResource("/res/daisy.jpg"));
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+
+		daisyLabel = new JLabel("daisy");
+		daisyLabel.setIcon(new ImageIcon(newDaisyImage));
 		daisyLabel.setBounds(380, 100, 500, 688);
 		myPanel.add(daisyLabel);
 		daisyLabel.hide();
@@ -71,8 +88,15 @@ public class HomePage implements ActionListener {
 		rosalina.addActionListener(new HomePage());
 		myPanel.add(rosalina);
 
-		rosalinaImage = new ImageIcon("rosalina.png");
-		rosalinaLabel = new JLabel(rosalinaImage);
+		try {
+			newRosalinaImage = ImageIO.read(HomePage.class.getResource("/res/rosalina.png"));
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+
+		rosalinaLabel = new JLabel("rosalina");
+		rosalinaLabel.setIcon(new ImageIcon(newRosalinaImage));
 		rosalinaLabel.setBounds(850, 100, 567, 688);
 		myPanel.add(rosalinaLabel);
 		rosalinaLabel.hide();
@@ -89,8 +113,6 @@ public class HomePage implements ActionListener {
 	public void actionPerformed(ActionEvent e) {
 		// TODO Auto-generated method stub
 
-		// peachLabel.show();
-
 		if (peach.getModel().isArmed()) {
 			peachLabel.setVisible(!peachLabel.isVisible());
 		}
@@ -102,8 +124,6 @@ public class HomePage implements ActionListener {
 		if (rosalina.getModel().isArmed()) {
 			rosalinaLabel.setVisible(!rosalinaLabel.isVisible());
 		}
-
-		// peachLabel.setVisible(false);
 
 	}
 
