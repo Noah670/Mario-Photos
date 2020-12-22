@@ -1,7 +1,7 @@
 # Mario-Photos
 A desktop Java app that allows Mario to login and view the Mushroom Kingdom Princesses [NSFW]
 
-[!alt-text](https://github.com/Noah670/Mario-Photos/blob/main/screens/marioLoginHome.png)
+![marioLogin](https://github.com/Noah670/Mario-Photos/blob/main/screens/marioLoginHome.png)
 
 # Default login
 
