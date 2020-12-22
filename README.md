@@ -1,9 +1,9 @@
 # Mario-Photos
-A desktop Java app that allows Mario to login and view his favourite Mushroom Kingdom Princesses [NSFW]
+A desktop Java app that allows Mario to login and view the Mushroom Kingdom Princesses [NSFW]
 
 # Default login
 
-- The default username and password for the login system is:
+- The default username and password for Mario Photos is:
 
   ```Username: mario```
   
