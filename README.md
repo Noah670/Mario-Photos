@@ -17,5 +17,4 @@ A desktop Java app that allows Mario to login and view his favourite Mushroom Ki
   
   
 
-# Download
--
+# [Download](https://github.com/Noah670/Mario-Photos/releases/download/1.1/MarioPhotos.jar)
