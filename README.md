@@ -8,17 +8,13 @@
   
   ```Password: epic ```
   
-- Another default login is:
+- Another possible account login is:
 
   ```Username: luigi```
   
   ```Password: 1985```
   
   
-
-
-# Future addtions
-- Get random mario pictures from the internet which are then updated and displayed
 
 # Download
 -
