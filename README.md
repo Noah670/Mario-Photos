@@ -18,5 +18,8 @@ A desktop Java app that allows Mario to login and view the Mushroom Kingdom Prin
   ```Password: 1985```
   
   
+  ![marioHome](https://github.com/Noah670/Mario-Photos/blob/main/screens/marioPhotosHome.png)
+  
+  
 
 # [Download](https://github.com/Noah670/Mario-Photos/releases/download/1.1/MarioPhotos.jar)
