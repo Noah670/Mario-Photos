@@ -1,5 +1,5 @@
 # Mario-Photos
-A desktop Java app that allows Mario to view his favourite Princesses from the Mushroom Kingdom [NSFW]
+A desktop Java app that allows Mario to login and view his favourite Mushroom Kingdom Princesses [NSFW]
 
 # Default login
 
